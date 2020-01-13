@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "61f53c2c-f74d-4833-96ff-a908e494a509",
+		"name": "userdetails-collection",
+		"description": "test cases for user details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"first_name\":\"RK\",\n\"last_name\":\"Nair\",\n\"gender\":\"Male\",\n\"birthDate\":\"07/02/1988\",\n\"email\":\"rknair@gmail.com\",\n\"hobbies\":\"reading\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/user/add?",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"add"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "RkN",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "nair",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "07/02/1988",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rn.nair@gmai.com",
+							"disabled": true
+						},
+						{
+							"key": "hobbies",
+							"value": "reading,writing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user email validation error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"first_name\":\"Ravindran\",\n\"last_name\":\"Nair\",\n\"gender\":\"Male\",\n\"birthDate\":\"08/04/1953\",\n\"email\":\"nair.raviKp@.com.com\",\n\"hobbies\":\"reading\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/user/add?",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"add"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "RkN",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "nair",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "07/02/1988",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rn.nair@gmai.com",
+							"disabled": true
+						},
+						{
+							"key": "hobbies",
+							"value": "reading,writing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"first_name\":\"Radhakrishnan\",\n\"last_name\":\"Panicker\",\n\"gender\":\"Male\",\n\"birthDate\":\"07/02/1988\",\n\"email\":\"rknaisr@.com.com\",\n\"hobbies\":\"reading,cooking\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/user/1001",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/user/1001",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085//user/1002",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"",
+						"user",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user DOB error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"first_name\":\"dummy name2\",\n\"last_name\":\"last\",\n\"gender\":\"Male\",\n\"birthDate\":\"07-02-1988\",\n\"email\":\"rknaisr@gmail.com\",\n\"hobbies\":\"reading\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/user/add?",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"add"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "RkN",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "nair",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "07/02/1988",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rn.nair@gmai.com",
+							"disabled": true
+						},
+						{
+							"key": "hobbies",
+							"value": "reading,writing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserById_error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085//users/1009",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"",
+						"users",
+						"1009"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user DOB validation error Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"first_name\":\"Ravindran\",\n\"last_name\":\"Nair\",\n\"gender\":\"Male\",\n\"birthDate\":\"21/04/1953\",\n\"email\":\"nair.raviKp@com.com\",\n\"hobbies\":\"reading\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/users/add?",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"users",
+						"add"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "RkN",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "nair",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "07/02/1988",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rn.nair@gmai.com",
+							"disabled": true
+						},
+						{
+							"key": "hobbies",
+							"value": "reading,writing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
